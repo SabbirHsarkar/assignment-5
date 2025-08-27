@@ -467,13 +467,13 @@ font-weight: 400;
 
 
 /* Media Queries */
-@media (min-width: 476px) and (max-width: 760px) {
+@media (min-width: 10px) and (max-width: 576px) {
 
   /* Navbar */
   .first-nav {
    height: 100px;
-   width:760px;
-    flex-wrap: wrap;
+   width:576px;
+    display: flex;
     justify-content: space-between;
     padding: 10px;
   
@@ -482,12 +482,12 @@ font-weight: 400;
 
 .banner{
   height: 239px;
-  width: 760px;
+  width: 576px;
 }
 
 .container{
   height: 4700px;
-  width: 810px;
+  width: 625px;
  
  grid-template-columns: repeat(1fr,1fr);
  
@@ -495,11 +495,11 @@ font-weight: 400;
 .history{
  grid-column: 1 / -1; 
     order: -1;  
-    width:760px;  
+    width:576px;  
 }
 
 .cards {
-  width: 760px;         
+  width: 576px;         
   margin-left: 0;
   display: grid;         
   grid-template-columns: 1fr;  
