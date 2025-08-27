@@ -147,13 +147,16 @@ background-color: rgba(0, 166, 62, 1);
 flex-direction: row;
 justify-content: center;
 align-items: center;
+text-align: center;
 gap: 10px;
-padding-bottom:  36px;
+
+padding-bottom: 16px;
+padding-top: 15px;
 
 
 font-size: 16px;
 font-weight: 600;
-line-height: 24px;
+
 }
 
 
@@ -198,9 +201,9 @@ text-align: center;
 
 font-family: Hind Madurai;
 font-size: 20px;
-font-weight: 600;
-line-height: 100%;
-letter-spacing: 0%;
+font-weight: 400;
+
+
 text-align: center;
 }
 
@@ -248,6 +251,19 @@ background: var(--White, rgba(255, 255, 255, 1));
 
 .card-header img {
  /* ambulance */
+width: 60px;
+height: 60px;
+border-radius: 16px;
+background: rgba(255, 227, 226, 1);
+}
+
+.card-header .card-img-p{
+  border-radius: 16px;
+background: rgba(223, 239, 255, 1);
+}
+
+.card-img{
+  /* fire-service */
 width: 32px;
 height: 32px;
 }
@@ -368,7 +384,7 @@ background: var(--White, rgba(255, 255, 255, 1));
 
 .history-header {
     
-width: 352px;
+width: 400px;
 height: 52px;
 
 display: flex;
@@ -467,3 +483,32 @@ font-weight: 400;
 .history li:last-child {
   border-bottom: none;
 }*/
+/* Media Queries */
+@media (min-width<= 768px) {
+    .first-nav{
+        height: 100px;
+        width: 760px;
+    }
+    .banner{
+       height: 239px;
+       width:760px; 
+    }
+    .container {
+        height: 800;
+        width: 760px;
+        grid-template-columns: 2fr 1fr;
+    }
+    .card{
+        height: 300px;
+        width:150px;
+    }
+    .cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
