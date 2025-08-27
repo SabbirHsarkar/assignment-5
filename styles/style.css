@@ -467,7 +467,7 @@ font-weight: 400;
 
 
 /* Media Queries */
-@media (min-width: 350px) and (max-width: 576px) {
+@media (min-width:0px) and (max-width: 576px) {
 
   /* Navbar */
   .first-nav {
