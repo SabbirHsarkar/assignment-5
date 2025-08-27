@@ -8,12 +8,17 @@
   font-style: normal;
 }
 
+.body{
+
+    width: 1920px;
+height: 1613px;
+}
 /*header nav*/
 
 
 .first-nav{
     height: 100px;
-    width: 1520px;
+    width: 1880px;
     display: flex;
     justify-content: space-between;
 }
@@ -137,6 +142,7 @@ background-color: rgba(0, 166, 62, 1);
 }
 
 .copy-content-nav{
+    color: rgba(255, 255, 255, 1);
     display: flex;
 flex-direction: row;
 justify-content: center;
@@ -144,25 +150,20 @@ align-items: center;
 gap: 10px;
 padding-bottom:  36px;
 
-}
-
-.copy-content{
-    color: rgba(255, 255, 255, 1);
-
 
 font-size: 16px;
 font-weight: 600;
 line-height: 24px;
-letter-spacing: 0%;
-text-align: center;
 }
+
+
 
 /* Banner */
 
 .banner{
     background: linear-gradient(90.00deg, rgba(1.251827359199524, 49.64006805419922, 34.606834411621094, 1),rgba(0, 103, 71, 1) 50%,rgba(1, 50, 35, 1) 100%);
     /* Frame 27154 */
-width: 1420px;
+width: 1822px;
 height: 239px;
 /* Auto layout */
 display: flex;
@@ -209,27 +210,34 @@ text-align: center;
 
 
 .container {
+ width: 1880px;
+height: 1140px;
   display: grid;
-  grid-template-columns: 3fr 2fr;
+  grid-template-columns: 2fr 1fr;
   gap: 20px;
-  padding: 20px;
+  padding: 32px;
+background-color: rgba(65, 255, 107, 0.1);
 }
 
 /* Emergency Cards */
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
 .card {
-  background: #fff;
+ width: 420px;
+ height: 340px;
+  
   padding: 16px;
   border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.15);
+background: var(--White, rgba(255, 255, 255, 1));
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
 }
 
 .card-header {
@@ -239,8 +247,9 @@ text-align: center;
 }
 
 .card-header img {
-  width: 36px;
-  height: 36px;
+ /* ambulance */
+width: 32px;
+height: 32px;
 }
 
 .card h3 {
@@ -260,16 +269,25 @@ text-align: center;
 }
 
 .tag {
-  background: #f6f6f6;
-  padding: 4px 10px;
+  background: var(--Gray-Light, rgba(242, 242, 242, 1));
+  padding-top: 15px;
   border-radius: 12px;
-  font-size: 12px;
+
+  text-align: center;
+font-size: 12px;
+font-weight: 400;
+line-height: 50%;
+letter-spacing: 0%;
+
+width: 65px;
+height: 25px;
+align-items: center;
 }
 
 .actions {
   display: flex;
   justify-content: space-between;
-  margin-top: 12px;
+  margin-top: 6px;
 }
 
 .actions button {
@@ -295,8 +313,8 @@ text-align: center;
 .history {
   /* History */
 width: 400px;
-height: 1140px;
-/* Auto layout */
+height: 1110px;
+
 
 padding: 24px;
 
@@ -314,13 +332,18 @@ background: var(--White, rgba(255, 255, 255, 1));
 }
 
 .clear {
-  background: #00a64d;
+  
   color: #fff;
   border: none;
   padding: 6px 12px;
   border-radius: 6px;
   cursor: pointer;
+  border-radius: 50px;
+background: rgba(0, 166, 62, 1);
+width: 114px;
+height: 52px;
 }
+
 
 .history ul {
   list-style: none;
