@@ -13,7 +13,7 @@ const favButtons = document.querySelectorAll('.card-header .fa-heart');
 const historyDiv = document.querySelector('.history');
 const clearBtn = document.querySelector('.clear');
 
-// Copy counter
+//counter
 let copyCount = 0;
 
 //Heart
@@ -28,22 +28,26 @@ favButtons.forEach(btn => {
 });
 
 //Call 
-callButtons.forEach(btn => {
-  btn.addEventListener('click', () => {
+callButtons.forEach(btn =>{
+  btn.addEventListener('click',()=>{
     let currentCoin = parseInt(coinText.textContent);
-    if (currentCoin >= 20) {
-      coinText.textContent = currentCoin-20;
-    } else {
-      alert("Not enough coins!");
-      return;
-    }
 
     // information
     const card = btn.closest('.card');
     const serviceName = card.querySelector('h3').textContent;
     const serviceNumber = card.querySelector('h2').textContent;
 
-    // Current Time
+    //Check coin
+    if (currentCoin < 20) {
+      alert("You don't have enough coins to make this call!");
+      return;
+    }
+
+    // calling alert
+    alert(`You are calling ${serviceName} at ${serviceNumber}. You cost 20 coins for this call.Thank you.`);
+    coinText.textContent = currentCoin -20;
+
+    //Current Time
     const currentTime = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
 
     // History add
@@ -73,8 +77,6 @@ copyButtons.forEach(btn => {
     }).catch(err => {
       console.error("Copy failed", err);
     });
-
-    // Increase counter
     copyCount++;
     copyText.textContent = `${copyCount} Copy`;
   });
@@ -85,4 +87,3 @@ clearBtn.addEventListener('click', () => {
   const items = historyDiv.querySelectorAll('.history-item');
   items.forEach(item => item.remove());
 });
-
